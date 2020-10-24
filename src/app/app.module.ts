@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import icons from '../assets/svg/svg-icons';
+import { SvgIconsModule } from '@ngneat/svg-icon';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    SvgIconsModule.forRoot({
+      icons
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
