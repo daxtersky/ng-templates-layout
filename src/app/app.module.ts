@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import icons from '../assets/svg/svg-icons';
 import { SvgIconsModule } from '@ngneat/svg-icon';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SvgIconsModule } from '@ngneat/svg-icon';
     NgbModule,
     SvgIconsModule.forRoot({
       icons
-    })
+    }),
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

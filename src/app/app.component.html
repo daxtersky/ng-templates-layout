@@ -2,8 +2,40 @@
 
   <!-- <svg-icon key="rocket" color="hotpink" fontSize="40px"></svg-icon> -->
   <!-- <svg-icon key="test" color="hotpink" fontSize="40px"></svg-icon> -->
+  <div style="border: 1px solid red;">
 
-  generalDashboardLevel <svg-icon key="generalDashboardLevel" fontSize="40px" style="display: flex"></svg-icon>
+    <div cdkDropListGroup>
+      <div class="example-container">
+        <h2>Available items</h2>
+
+        <div class="example-list"
+          cdkDropList
+          cdkDropListSortingDisabled
+          [cdkDropListData]="items"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of items" cdkDrag>
+            {{item}}
+            <svg-icon (click)="onMoveClick($event, item, 'up')" key="generalTriangleUp" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
+            <svg-icon (click)="onMoveClick($event, item, 'down')" key="generalTriangleDown" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
+            <svg-icon (click)="onDeleteClick(item)" key="generalDeleteForever" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h2>Shopping basket</h2>
+
+        <div cdkDropList [cdkDropListData]="basket" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of basket" cdkDrag>{{item}}</div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- generalDashboardLevel <svg-icon key="generalDashboardLevel" fontSize="40px" style="display: flex"></svg-icon>
   generalGrid45 <svg-icon key="generalGrid45" fontSize="40px" style="display: flex"></svg-icon>
   generalLayout11 <svg-icon key="generalLayout11" fontSize="40px" style="display: flex"></svg-icon>
   generalSpaceShip <svg-icon key="generalSpaceShip" fontSize="40px" style="display: flex"></svg-icon>
@@ -49,5 +81,5 @@
   generalEngineStart <svg-icon key="generalEngineStart" fontSize="40px" style="display: flex"></svg-icon>
   generalBulletList70 <svg-icon key="generalBulletList70" fontSize="40px" style="display: flex"></svg-icon>
   generalEdit <svg-icon key="generalEdit" fontSize="40px" style="display: flex"></svg-icon>
-  generalFolterAdd <svg-icon key="generalFolterAdd" fontSize="40px" style="display: flex"></svg-icon>
+  generalFolterAdd <svg-icon key="generalFolterAdd" fontSize="40px" style="display: flex"></svg-icon> -->
 </div>
