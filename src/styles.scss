@@ -1,17 +1,15 @@
-/* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
 * {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fff;
-  background-color: #31345F;
 }
 
-// :host {
-// }
+// :host { }
+
 html, body {
   height: 100%;
 }
