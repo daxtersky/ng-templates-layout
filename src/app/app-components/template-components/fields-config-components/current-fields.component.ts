@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TemplatesService } from './../templates.service';
 import { CdkDragDrop, copyArrayItem, moveItemInArray } from '@angular/cdk/drag-drop';
 
@@ -6,20 +6,11 @@ import { CdkDragDrop, copyArrayItem, moveItemInArray } from '@angular/cdk/drag-d
   selector: 'app-current-fields',
   templateUrl: './current-fields.component.html',
   styleUrls: ['./current-fields.component.scss'],
-  // providers: [TemplatesService]
 })
-export class CurrentFieldsComponent implements OnInit {
-  hoverIndex = -1;
+export class CurrentFieldsComponent {
+  constructor(public templatesService: TemplatesService) { }
 
-  constructor(private templatesService: TemplatesService) {
-
-  }
-
-  ngOnInit(): void {
-    console.log('service', this.templatesService);
-  }
-
-  onHover = (i: number): number => this.hoverIndex = i;
+  onHover = (i: number): number => this.templatesService.hoverIndex = i;
 
 }
 

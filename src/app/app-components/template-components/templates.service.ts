@@ -4,22 +4,27 @@ import { CdkDragDrop, copyArrayItem, moveItemInArray } from '@angular/cdk/drag-d
 @Injectable({ providedIn: 'root' })
 
 export class TemplatesService {
+  hoverIndex = -1;
+
   items: string[] = [
-    'Carrots',
-    'Tomatoes',
-    'Onions',
-    'Apples',
-    'Avocados'
+    'Text - one line',
+    'Text - multiline',
+    'Checklist',
+    'Radiobuttons',
+    'Text - rich',
   ];
   basket: string[] = [
-    'Oranges',
-    'Bananas',
-    'Cucumbers'
+    'Text - one line',
+    'Text - multiline',
+    'Text - rich',
+    'Select from list - single',
+    'Select from list - multi',
+    'Checklist',
+    'Radiobuttons',
+    'Date/time picker',
   ];
 
-  constructor() {
-    console.log('Hello Angular Lovers!');
-  }
+  constructor() { }
 
   onMoveTopClick(e, item: string): void {
     const itemPosition = this.items.findIndex(i => i === item);
@@ -27,11 +32,15 @@ export class TemplatesService {
   }
   onMoveUpClick(e, item: string): void {
     const itemPosition = this.items.findIndex(i => i === item);
-    this.items.splice(itemPosition - 1, 0, this.items.splice(itemPosition, 1)[0]);
+    if (itemPosition !== 0) {
+      this.items.splice(itemPosition - 1, 0, this.items.splice(itemPosition, 1)[0]);
+    }
   }
   onMoveDownClick(e, item: string): void {
     const itemPosition = this.items.findIndex(i => i === item);
-    this.items.splice(itemPosition + 1, 0, this.items.splice(itemPosition, 1)[0]);
+    if (itemPosition !== this.items.length - 1) {
+      this.items.splice(itemPosition + 1, 0, this.items.splice(itemPosition, 1)[0]);
+    }
   }
   onMoveBottomClick(e, item: string): void {
     const itemPosition = this.items.findIndex(i => i === item);
@@ -44,16 +53,13 @@ export class TemplatesService {
   }
 
   drop(event: CdkDragDrop<string[]>): void {
-    const dragOnlyFromRightToLeft = (event.container.id === 'cdk-drop-list-0' && event.previousContainer.id === 'cdk-drop-list-1');
-    if (dragOnlyFromRightToLeft) {
-      if (event.previousContainer === event.container) {
-        moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-      } else {
-        copyArrayItem(event.previousContainer.data,
-          event.container.data,
-          event.previousIndex,
-          event.currentIndex);
-      }
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      copyArrayItem(event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
     }
   }
 

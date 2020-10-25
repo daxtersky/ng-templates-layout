@@ -1,13 +1,12 @@
-<h3 class="size-10 color-grey header-lines"><span class="size-12">Field configuration</span></h3>
+<h3 class="size-10 color-grey header-lines"><span class="size-12">Available components</span></h3>
 
 <div cdkDropListGroup>
-  <div class="example-container">
-
-    <div cdkDropList [cdkDropListData]="templatesService?.basket" class="example-list"
-      (cdkDropListDropped)="templatesService?.drop($event)">
-      <div class="example-box" *ngFor="let item of templatesService?.basket" cdkDrag>{{item}}</div>
+  <div class="available-items-wrapper" cdkDropList [cdkDropListData]="templatesService.basket" [cdkDropListConnectedTo]="['destination']"
+    (cdkDropListDropped)="templatesService.drop($event)">
+    <div class="d-flex align-items-center available-item px-2 size-10 justify-content-between" *ngFor="let item of templatesService?.basket" cdkDrag>
+      <span class="size-10">{{item}}</span>
+      <svg-icon class="d-flex size-28 h-100 pr-1 color-light-blue" key="generalDeleteForever"></svg-icon>
     </div>
   </div>
 
 </div>
-

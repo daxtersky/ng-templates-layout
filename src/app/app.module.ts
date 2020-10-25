@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -11,7 +10,6 @@ import { TemplatesService } from './app-components/template-components/templates
 
 import { AppComponent } from './app.component';
 import { TemplatesComponent } from './app-components/templates.component';
-import { TempComponent } from './app-components/temp.component';
 import { BasicInfoComponent } from './app-components/template-components/basic-info.component';
 import { FieldsConfigComponent } from './app-components/template-components/fields-config.component';
 import { AvailableComponentsComponent } from './app-components/template-components/fields-config-components/available-components.component';
@@ -23,7 +21,6 @@ import { TemplateInputTypeComponent } from './app-components/shared/template-inp
 @NgModule({
   declarations: [
     AppComponent,
-    TempComponent,
     TemplatesComponent,
     BasicInfoComponent,
     FieldsConfigComponent,
@@ -35,7 +32,6 @@ import { TemplateInputTypeComponent } from './app-components/shared/template-inp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgbModule,
     SvgIconsModule.forRoot({
       icons

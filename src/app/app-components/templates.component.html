@@ -1,56 +1,37 @@
-<div style="  height: 100%;
-display: flex;
-flex-direction: column;">
+<div class="templates-wrapper">
 
+  <header class="d-flex h-100 flex-row align-items-center">
+    <svg-icon class="d-flex size-20" key="generalGrid45"></svg-icon>
+    <span class="size-12 mx-4 color-grey font-weight-600">AB CareClinic Documentation</span>
+    <svg-icon class="d-flex size-12 color-grey" key="generalHotel2"></svg-icon>
+    <span class="size-12 mx-4 color-grey font-weight-600">Templates</span>
+    <img class="ml-auto mr-2" src="./../assets/user.jpg" height="20" alt="User">
+    <span class="size-12 color-grey">John Snow</span>
+  </header>
 
-  <!-- <app-temporary></app-temporary> -->
+  <section class="content-wrapper">
+    <section class="title-wrapper d-flex flex-row align-items-center">
+      <div class="d-flex flex-row align-items-center">
+        <h1 class="title-main size-24">Templates</h1>
+        <span class="section-active size-14 ml-5">Create</span>
+        <span class="size-14 ml-5">Manage</span>
+      </div>
+    </section>
 
-  generalDashboardLevel <svg-icon class="d-flex size-20" key="generalDashboardLevel"></svg-icon>
-  generalGrid45 <svg-icon class="d-flex size-20" key="generalGrid45"></svg-icon>
-  generalLayout11 <svg-icon class="d-flex size-20" key="generalLayout11"></svg-icon>
-  generalSpaceShip <svg-icon class="d-flex size-20" key="generalSpaceShip"></svg-icon>
-  generalGear <svg-icon class="d-flex size-20" key="generalGear"></svg-icon>
-  generalBook39 <svg-icon class="d-flex size-20" key="generalBook39"></svg-icon>
-  generalNotes <svg-icon class="d-flex size-20" key="generalNotes"></svg-icon>
-  generalGear2 <svg-icon class="d-flex size-20" key="generalGear2"></svg-icon>
-  generalCalendarDate <svg-icon class="d-flex size-20" key="generalCalendarDate"></svg-icon>
-  generalFileText <svg-icon class="d-flex size-20" key="generalFileText"></svg-icon>
-  generalTagsStack <svg-icon class="d-flex size-20" key="generalTagsStack"></svg-icon>
-  generalClock <svg-icon class="d-flex size-20" key="generalClock"></svg-icon>
-  generalGear3 <svg-icon class="d-flex size-20" key="generalGear3"></svg-icon>
-  generalAEdit <svg-icon class="d-flex size-20" key="generalAEdit"></svg-icon>
-  generalMenu8 <svg-icon class="d-flex size-20" key="generalMenu8"></svg-icon>
-  generalBook39Two <svg-icon class="d-flex size-20" key="generalBook39Two"></svg-icon>
-  generalCQuestion <svg-icon class="d-flex size-20" key="generalCQuestion"></svg-icon>
-  generalPadlock <svg-icon class="d-flex size-20" key="generalPadlock"></svg-icon>
-  generalCalendarDate2 <svg-icon class="d-flex size-20" key="generalCalendarDate2"></svg-icon>
-  generalHotel2 <svg-icon class="d-flex size-20" key="generalHotel2"></svg-icon>
-  generalLeave <svg-icon class="d-flex size-20" key="generalLeave"></svg-icon>
-  generalBusinessMan04 <svg-icon class="d-flex size-20" key="generalBusinessMan04"></svg-icon>
-  generalAppStore <svg-icon class="d-flex size-20" key="generalAppStore"></svg-icon>
-  generalAppStore2 <svg-icon class="d-flex size-20" key="generalAppStore2"></svg-icon>
-  generalContrast <svg-icon class="d-flex size-20" key="generalContrast"></svg-icon>
-  generalSmallDown <svg-icon class="d-flex size-20" key="generalSmallDown"></svg-icon>
-  generalCompare <svg-icon class="d-flex size-20" key="generalCompare"></svg-icon>
-  generalText2Two <svg-icon class="d-flex size-20" key="generalText2Two"></svg-icon>
-  generalEnlarge <svg-icon class="d-flex size-20" key="generalEnlarge"></svg-icon>
-  generalDrag <svg-icon class="d-flex size-20" key="generalDrag"></svg-icon>
-  generalSurvey <svg-icon class="d-flex size-20" key="generalSurvey"></svg-icon>
-  generalCRemove <svg-icon class="d-flex size-20" key="generalCRemove"></svg-icon>
-  generalCCheck <svg-icon class="d-flex size-20" key="generalCCheck"></svg-icon>
-  generalTWarning <svg-icon class="d-flex size-20" key="generalTWarning"></svg-icon>
-  generalPointingUp <svg-icon class="d-flex size-20" key="generalPointingUp"></svg-icon>
-  generalTriangleUp <svg-icon class="d-flex size-20" key="generalTriangleUp"></svg-icon>
-  generalPointingDown <svg-icon class="d-flex size-20" key="generalPointingDown"></svg-icon>
-  generalTriangleDown <svg-icon class="d-flex size-20" key="generalTriangleDown"></svg-icon>
-  generalDeleteForever <svg-icon class="d-flex size-20" key="generalDeleteForever"></svg-icon>
-  generalSettings <svg-icon class="d-flex size-20" key="generalSettings"></svg-icon>
-  generalIDelete <svg-icon class="d-flex size-20" key="generalIDelete"></svg-icon>
-  generalIAdd <svg-icon class="d-flex size-20" key="generalIAdd"></svg-icon>
-  generalPreview <svg-icon class="d-flex size-20" key="generalPreview"></svg-icon>
-  generalEngineStart <svg-icon class="d-flex size-20" key="generalEngineStart"></svg-icon>
-  generalBulletList70 <svg-icon class="d-flex size-20" key="generalBulletList70"></svg-icon>
-  generalEdit <svg-icon class="d-flex size-20" key="generalEdit"></svg-icon>
-  generalFolterAdd <svg-icon class="d-flex size-20" key="generalFolterAdd"></svg-icon>
+    <section class="description-wrapper d-flex flex-row align-items-center">
+      <div class="d-flex flex-column">
+        <span class="size-12">Fill all information in two sections</span>
+        <span class="color-grey size-12">Creating new templates is divided in two parts</span>
+      </div>
+      <button type="button" class="btn btn-success ml-auto" disabled>Create</button>
+    </section>
 
+    <app-basic-info></app-basic-info>
+    <app-fields-config></app-fields-config>
+
+  </section>
+
+    <footer>
+      <svg-icon class="d-flex size-20" key="generalGear"></svg-icon>
+    </footer>
 </div>

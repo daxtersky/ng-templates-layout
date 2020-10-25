@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TemplatesService } from './../templates.service';
 
 @Component({
@@ -6,12 +6,9 @@ import { TemplatesService } from './../templates.service';
   templateUrl: './available-components.component.html',
   styleUrls: ['./available-components.component.scss']
 })
-export class AvailableComponentsComponent implements OnInit {
-  constructor(private templatesService: TemplatesService) {
+export class AvailableComponentsComponent {
+  constructor(public templatesService: TemplatesService) {
 
-  }
-  ngOnInit(): void {
-    console.log('service', this.templatesService);
   }
 
 }
