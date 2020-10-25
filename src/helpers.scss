@@ -1,0 +1,58 @@
+$color-white: #fff;
+$color-catalina-blue: #32325c;
+$color-grey: #706d8f;
+$color-light-blue: #6581EB;
+$color-midnight: #3d4f6d;
+$color-deep-sapphire: #8194a5;
+$color-flower-blue: #414163;
+$color-lavender-grey: #8d8da1;
+
+.color-grey {
+  color: $color-grey;
+}
+.color-light-blue {
+  color: $color-light-blue;
+}
+.color-midnight {
+  color: $color-midnight;
+}
+.color-flower-blue {
+  color: $color-flower-blue;
+}
+.color-icon-white {
+  svg {
+    fill: $color-white;
+  }
+}
+
+.size-24 {
+  font-size: 24px;
+}
+.size-22 {
+  font-size: 22px;
+}
+.size-20 {
+  font-size: 20px;
+}
+.size-18 {
+  font-size: 18px;
+}
+.size-16 {
+  font-size: 16px;
+}
+.size-14 {
+  font-size: 14px;
+}
+.size-12 {
+  font-size: 12px;
+}
+.size-10 {
+  font-size: 10px;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-400 {
+  font-weight: 600;
+}

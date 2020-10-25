@@ -1,1 +1,23 @@
-basic info component
+<div class="basic-info-wrapper">
+  <div class="d-flex flex-row align-items-center h-100">
+    <app-section-circle [sectionCredentials]="'B'"></app-section-circle>
+    <h2 class="title-main h-100 m-0 ml-2 size-20">Basic information</h2>
+  </div>
+  <div class="basic-info-content d-flex flex-row justify-content-between pt-4">
+    <div class="color-light-blue d-flex flex-column mx-3 w-100">
+      <span class="basic-info-title text-uppercase size-12 weight-600 pb-2">Name</span>
+      <app-template-input-type [type]="'name'"></app-template-input-type>
+    </div>
+    <div class="color-light-blue d-flex flex-column mx-3 w-100">
+      <span class="basic-info-title text-uppercase size-12 weight-600 pb-2">Type</span>
+      <app-template-input-type [type]="'entry'"></app-template-input-type>
+    </div>
+    <div class="color-light-blue d-flex flex-column mx-3 w-100">
+      <span class="basic-info-title text-uppercase size-12 weight-600 pb-2">Available</span>
+      <app-template-input-type [type]="'dateFrom'"></app-template-input-type>
+    </div>
+    <div class="color-light-blue d-flex flex-column mx-3 w-100 justify-content-end">
+      <app-template-input-type [type]="'dateTo'"></app-template-input-type>
+    </div>
+  </div>
+</div>

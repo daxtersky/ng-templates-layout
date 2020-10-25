@@ -1,0 +1,41 @@
+@import './../../../helpers.scss';
+
+.input-wrapper {
+  height: 35px;
+  color: $color-lavender-grey;
+  background-color: $color-flower-blue;
+  border: 1px solid $color-catalina-blue;
+}
+
+.input-dash {
+  padding-left: 26px;
+  position: relative;
+}
+
+.input-group {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    border-bottom: 1px solid $color-lavender-grey;
+    width: 10px;
+    z-index:0;
+    left:11px
+  }
+}
+
+
+// .title-main {
+//   position: relative;
+//   margin-right: 90px
+// }
+// .title-main:after {
+//   content: '';
+//   position: absolute;
+//   bottom: 44%;
+//   border-bottom: 2px solid;
+//   width: 30px;
+//   z-index:0;
+//   right: -85px;
+// }

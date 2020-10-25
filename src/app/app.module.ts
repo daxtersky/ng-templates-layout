@@ -15,6 +15,8 @@ import { FieldsConfigComponent } from './app-components/template-components/fiel
 import { AvailableComponentsComponent } from './app-components/template-components/fields-config-components/available-components.component';
 import { CurrentFieldsComponent } from './app-components/template-components/fields-config-components/current-fields.component';
 import { FieldEditComponent } from './app-components/template-components/fields-config-components/field-edit.component';
+import { SectionCircleComponent } from './app-components/shared/section-circle.component';
+import { TemplateInputTypeComponent } from './app-components/shared/template-input-type.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FieldEditComponent } from './app-components/template-components/fields-
     FieldsConfigComponent,
     AvailableComponentsComponent,
     CurrentFieldsComponent,
-    FieldEditComponent
+    FieldEditComponent,
+    SectionCircleComponent,
+    TemplateInputTypeComponent
   ],
   imports: [
     BrowserModule,

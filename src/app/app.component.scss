@@ -1,77 +1,39 @@
-$color-white: #fff;
-$color-grey: #706d8f;
-$color-light-blue: #6581EB;
+@import './../helpers.scss';
 
 .app-wrapper {
   display: grid;
-  grid-template-rows: auto 120px 80px 1fr auto;
-  gap: 10px;
+  grid-template-rows: auto 1fr auto;
   padding: 10px;
-  background-color: #342f60;
+  background-color: $color-catalina-blue;
   color: $color-white;
 }
 
-.title-wrapper {
-  margin:0 40px;
-  border-bottom: 1px solid $color-grey;
-  .title-main {
-    position: relative;
-    margin-right: 90px
+.content-wrapper {
+  display: grid;
+  grid-template-rows: 120px 80px auto 1fr auto;
+  gap: 10px;
+  padding: 10px;
+  margin: 0 40px;
+  .title-wrapper {
+    border-bottom: 1px solid $color-grey;
+    .title-main {
+      position: relative;
+      margin-right: 90px;
+    }
+    .title-main:after {
+      content: '';
+      position: absolute;
+      bottom: 44%;
+      border-bottom: 2px solid;
+      width: 30px;
+      z-index:0;
+      right: -85px;
+    }
+    .section-active {
+      border-bottom: 2.5px solid $color-light-blue;
+    }
   }
-  .title-main:after {
-    content: '';
-    position: absolute;
-    bottom: 44%;
-    border-bottom: 2px solid;
-    width: 30px;
-    z-index:0;
-    right: -85px;
+  .description-wrapper {
+    border-bottom: 1px solid $color-grey;
   }
-
-  .section-active {
-    border-bottom: 2.5px solid $color-light-blue;
-  }
-}
-
-.description-wrapper {
-  margin:0 40px;
-  border-bottom: 1px solid $color-grey;
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  // grid-template-rows: repeat(2, 1fr);
-  // .description-title { grid-area: 1 / 1 / 2 / 2; }
-  // .description-subtitle { grid-area: 2 / 1 / 3 / 2; }
-  // .description-button { grid-area: 1 / 2 / 3 / 3; }
-}
-
-.color-grey {
-  color: $color-grey;
-}
-.color-light-blue {
-  color: $color-light-blue;
-}
-
-
-.size-24 {
-  font-size: 24px;
-}
-.size-20 {
-  font-size: 20px;
-}
-.size-16 {
-  font-size: 16px;
-}
-.size-14 {
-  font-size: 14px;
-}
-.size-12 {
-  font-size: 12px;
-}
-
-
-.font-weight-400 {
-  font-weight: 400;
-}
-.font-weight-400 {
-  font-weight: 600;
 }

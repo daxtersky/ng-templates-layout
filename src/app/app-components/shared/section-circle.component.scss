@@ -1,0 +1,11 @@
+@import './../../../helpers.scss';
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $color-light-blue;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}

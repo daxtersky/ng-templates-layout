@@ -1,6 +1,12 @@
+@import './../../../helpers.scss';
+
 :host{
-  height: 100px;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  background-color: lightgray;
+  padding: 40px 0;
+}
+
+.basic-info-title {
+  text-transform: uppercase;
 }
