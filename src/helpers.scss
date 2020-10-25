@@ -6,7 +6,12 @@ $color-midnight: #3d4f6d;
 $color-deep-sapphire: #8194a5;
 $color-flower-blue: #414163;
 $color-lavender-grey: #8d8da1;
+$color-magenta-blue: #212143;
+$color-turquise: #29c093;
 
+.color-white {
+  color: $color-white;
+}
 .color-grey {
   color: $color-grey;
 }
@@ -19,10 +24,11 @@ $color-lavender-grey: #8d8da1;
 .color-flower-blue {
   color: $color-flower-blue;
 }
-.color-icon-white {
-  svg {
-    fill: $color-white;
-  }
+.color-magenta-blue {
+  color: $color-magenta-blue;
+}
+.color-turquise {
+  color: $color-turquise;
 }
 
 .size-24 {
@@ -55,4 +61,21 @@ $color-lavender-grey: #8d8da1;
 }
 .font-weight-400 {
   font-weight: 600;
+}
+
+.header-lines {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid;
+  line-height: 0;
+  margin: 10px 0 20px;
+  font-size: 10px;
+}
+.header-lines span {
+  background: $color-catalina-blue;
+  padding:0 10px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

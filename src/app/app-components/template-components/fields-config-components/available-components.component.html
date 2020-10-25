@@ -1,1 +1,13 @@
-available-components.component.html
+<h3 class="size-10 color-grey header-lines"><span class="size-12">Field configuration</span></h3>
+
+<div cdkDropListGroup>
+  <div class="example-container">
+
+    <div cdkDropList [cdkDropListData]="templatesService?.basket" class="example-list"
+      (cdkDropListDropped)="templatesService?.drop($event)">
+      <div class="example-box" *ngFor="let item of templatesService?.basket" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+</div>
+

@@ -1,1 +1,50 @@
-current-fields.component.html
+<h3 class="color-grey header-lines"><span class="size-12">Current fields</span></h3>
+
+<div cdkDropListGroup>
+  <div cdkDropList cdkDropListSortingDisabled [cdkDropListData]="templatesService?.items"
+    (cdkDropListDropped)="templatesService?.drop($event)">
+    <div class="field-item f-weight-600" *ngFor="let item of templatesService.items; let i = index" cdkDrag>
+      <div class="h-100 w-100" (mouseover)="onHover(i)" (mouseout)="onHover(-1)">
+        <div class="d-flex h-100 flex-row w-100 justify-content-between" *ngIf="i !== hoverIndex">
+          <div class="d-flex h-100 flex-column justify-content-center pl-2">
+            <span class="size-10">Example field title #{{ i }}</span>
+            <span class="size-10 color-turquise text-uppercase">{{ item }}</span>
+          </div>
+          <div class="d-flex align-items-center pr-2">
+            <span class="color-turquise size-14 f-weight-400 pr-1">{{ i }}.</span>
+            <svg-icon class="d-flex size-20 color-turquise" key="generalText2Two"></svg-icon>
+          </div>
+        </div>
+        <div class="d-flex h-100 flex-row align-items-center justify-content-between field-item-hovered" *ngIf="i === hoverIndex">
+
+          <svg-icon class="d-flex h-100 size-20 pl-2 color-white" key="generalSettings"></svg-icon>
+
+          <div class="d-flex align-items-center h-100">
+            <svg-icon (click)="templatesService?.onMoveTopClick($event, item)" key="generalPointingUp" fontSize="20px"
+              class="d-flex cursor-pointer color-magenta-blue px-1"></svg-icon>
+            <svg-icon (click)="templatesService?.onMoveUpClick($event, item)" key="generalTriangleUp" fontSize="20px"
+              class="d-flex cursor-pointer color-magenta-blue px-1"></svg-icon>
+            <svg-icon (click)="templatesService?.onMoveDownClick($event, item)" key="generalTriangleDown"
+              fontSize="20px" class="d-flex cursor-pointer color-magenta-blue px-1"></svg-icon>
+            <svg-icon (click)="templatesService?.onMoveBottomClick($event, item)" key="generalPointingDown"
+              fontSize="20px" class="d-flex cursor-pointer color-magenta-blue px-1"></svg-icon>
+            <svg-icon (click)="templatesService?.onDeleteClick(item)" key="generalDeleteForever" fontSize="20px"
+              class="d-flex cursor-pointer color-magenta-blue px-1"></svg-icon>
+          </div>
+
+          <svg-icon class="d-flex size-20 h-100 pr-2 color-white" key="generalDeleteForever"></svg-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="example-container">
+    <h2>Shopping basket</h2>
+
+    <div cdkDropList [cdkDropListData]="templatesService?.basket" class="example-list"
+      (cdkDropListDropped)="templatesService?.drop($event)">
+      <div class="example-box" *ngFor="let item of templatesService?.basket" cdkDrag>{{item}}</div>
+    </div>
+  </div> -->
+
+</div>

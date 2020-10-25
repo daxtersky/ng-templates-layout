@@ -7,6 +7,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import icons from '../assets/svg/svg-icons';
 
+import { TemplatesService } from './app-components/template-components/templates.service';
+
 import { AppComponent } from './app.component';
 import { TemplatesComponent } from './app-components/templates.component';
 import { TempComponent } from './app-components/temp.component';
@@ -40,7 +42,7 @@ import { TemplateInputTypeComponent } from './app-components/shared/template-inp
     }),
     DragDropModule
   ],
-  providers: [],
+  providers: [TemplatesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

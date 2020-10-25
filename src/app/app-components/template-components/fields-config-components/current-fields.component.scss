@@ -1,0 +1,13 @@
+@import './../../../../helpers.scss';
+
+.field-item {
+  height: 50px;
+  border: 2px solid $color-magenta-blue;
+  border-radius: 4px;
+  margin: 10px 0;
+
+  .field-item-hovered {
+    border: 0;
+    background-color: $color-turquise;
+  }
+}

@@ -1,13 +1,13 @@
 <div class="fields-config-wrapper">
-  <div class="d-flex flex-row align-items-center ">
+  <div class="d-flex flex-row align-items-center pb-4">
     <app-section-circle [sectionCredentials]="'F'"></app-section-circle>
     <h2 class="title-main h-100 m-0 ml-2 size-20">Fields configuration</h2>
   </div>
 
-  <div style="display: flex; flex-direction: column; margin-left: 30px; margin-top: 50px; width: max-content;">
-    <app-available-components></app-available-components>
+  <div class="fields-config-content mx-3">
     <app-current-fields></app-current-fields>
-    <app-field-edit></app-field-edit>
+    <app-available-components></app-available-components>
+    <app-field-edit *ngIf="false"></app-field-edit>
   </div>
 
 </div>

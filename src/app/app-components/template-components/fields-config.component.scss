@@ -1,7 +1,7 @@
 @import './../../../helpers.scss';
 
-:host{
-  display: flex;
-  width: 100%;
-  // padding: 40px 0;
+.fields-config-content {
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 1fr 2fr;
 }
