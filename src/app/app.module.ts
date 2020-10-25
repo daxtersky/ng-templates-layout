@@ -9,6 +9,7 @@ import icons from '../assets/svg/svg-icons';
 
 import { AppComponent } from './app.component';
 import { TemplatesComponent } from './app-components/templates.component';
+import { TempComponent } from './app-components/temp.component';
 import { BasicInfoComponent } from './app-components/template-components/basic-info.component';
 import { FieldsConfigComponent } from './app-components/template-components/fields-config.component';
 import { AvailableComponentsComponent } from './app-components/template-components/fields-config-components/available-components.component';
@@ -18,6 +19,7 @@ import { FieldEditComponent } from './app-components/template-components/fields-
 @NgModule({
   declarations: [
     AppComponent,
+    TempComponent,
     TemplatesComponent,
     BasicInfoComponent,
     FieldsConfigComponent,

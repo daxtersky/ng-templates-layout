@@ -1,89 +1,61 @@
-<div class="app-wrapper">
+<div style="  height: 100%;
+display: flex;
+flex-direction: column;
+color: #fff;
+background-color: #31345F;">
 
   TEMPLATES
   <app-basic-info></app-basic-info>
   <app-fields-config></app-fields-config>
 
-  <div style="background-color: lightseagreen;">
+  <!-- <app-temporary></app-temporary> -->
 
-    <div cdkDropListGroup>
-      <div class="example-container">
-        <h2>Available items</h2>
+  generalDashboardLevel <svg-icon class="d-flex icon-size-20" key="generalDashboardLevel"></svg-icon>
+  generalGrid45 <svg-icon class="d-flex icon-size-20" key="generalGrid45"></svg-icon>
+  generalLayout11 <svg-icon class="d-flex icon-size-20" key="generalLayout11"></svg-icon>
+  generalSpaceShip <svg-icon class="d-flex icon-size-20" key="generalSpaceShip"></svg-icon>
+  generalGear <svg-icon class="d-flex icon-size-20" key="generalGear"></svg-icon>
+  generalBook39 <svg-icon class="d-flex icon-size-20" key="generalBook39"></svg-icon>
+  generalNotes <svg-icon class="d-flex icon-size-20" key="generalNotes"></svg-icon>
+  generalGear2 <svg-icon class="d-flex icon-size-20" key="generalGear2"></svg-icon>
+  generalCalendarDate <svg-icon class="d-flex icon-size-20" key="generalCalendarDate"></svg-icon>
+  generalFileText <svg-icon class="d-flex icon-size-20" key="generalFileText"></svg-icon>
+  generalTagsStack <svg-icon class="d-flex icon-size-20" key="generalTagsStack"></svg-icon>
+  generalClock <svg-icon class="d-flex icon-size-20" key="generalClock"></svg-icon>
+  generalGear3 <svg-icon class="d-flex icon-size-20" key="generalGear3"></svg-icon>
+  generalAEdit <svg-icon class="d-flex icon-size-20" key="generalAEdit"></svg-icon>
+  generalMenu8 <svg-icon class="d-flex icon-size-20" key="generalMenu8"></svg-icon>
+  generalBook39Two <svg-icon class="d-flex icon-size-20" key="generalBook39Two"></svg-icon>
+  generalCQuestion <svg-icon class="d-flex icon-size-20" key="generalCQuestion"></svg-icon>
+  generalPadlock <svg-icon class="d-flex icon-size-20" key="generalPadlock"></svg-icon>
+  generalCalendarDate2 <svg-icon class="d-flex icon-size-20" key="generalCalendarDate2"></svg-icon>
+  generalHotel2 <svg-icon class="d-flex icon-size-20" key="generalHotel2"></svg-icon>
+  generalLeave <svg-icon class="d-flex icon-size-20" key="generalLeave"></svg-icon>
+  generalBusinessMan04 <svg-icon class="d-flex icon-size-20" key="generalBusinessMan04"></svg-icon>
+  generalAppStore <svg-icon class="d-flex icon-size-20" key="generalAppStore"></svg-icon>
+  generalAppStore2 <svg-icon class="d-flex icon-size-20" key="generalAppStore2"></svg-icon>
+  generalContrast <svg-icon class="d-flex icon-size-20" key="generalContrast"></svg-icon>
+  generalSmallDown <svg-icon class="d-flex icon-size-20" key="generalSmallDown"></svg-icon>
+  generalCompare <svg-icon class="d-flex icon-size-20" key="generalCompare"></svg-icon>
+  generalText2Two <svg-icon class="d-flex icon-size-20" key="generalText2Two"></svg-icon>
+  generalEnlarge <svg-icon class="d-flex icon-size-20" key="generalEnlarge"></svg-icon>
+  generalDrag <svg-icon class="d-flex icon-size-20" key="generalDrag"></svg-icon>
+  generalSurvey <svg-icon class="d-flex icon-size-20" key="generalSurvey"></svg-icon>
+  generalCRemove <svg-icon class="d-flex icon-size-20" key="generalCRemove"></svg-icon>
+  generalCCheck <svg-icon class="d-flex icon-size-20" key="generalCCheck"></svg-icon>
+  generalTWarning <svg-icon class="d-flex icon-size-20" key="generalTWarning"></svg-icon>
+  generalPointingUp <svg-icon class="d-flex icon-size-20" key="generalPointingUp"></svg-icon>
+  generalTriangleUp <svg-icon class="d-flex icon-size-20" key="generalTriangleUp"></svg-icon>
+  generalPointingDown <svg-icon class="d-flex icon-size-20" key="generalPointingDown"></svg-icon>
+  generalTriangleDown <svg-icon class="d-flex icon-size-20" key="generalTriangleDown"></svg-icon>
+  generalDeleteForever <svg-icon class="d-flex icon-size-20" key="generalDeleteForever"></svg-icon>
+  generalSettings <svg-icon class="d-flex icon-size-20" key="generalSettings"></svg-icon>
+  generalIDelete <svg-icon class="d-flex icon-size-20" key="generalIDelete"></svg-icon>
+  generalIAdd <svg-icon class="d-flex icon-size-20" key="generalIAdd"></svg-icon>
+  generalPreview <svg-icon class="d-flex icon-size-20" key="generalPreview"></svg-icon>
+  generalEngineStart <svg-icon class="d-flex icon-size-20" key="generalEngineStart"></svg-icon>
+  generalBulletList70 <svg-icon class="d-flex icon-size-20" key="generalBulletList70"></svg-icon>
+  generalEdit <svg-icon class="d-flex icon-size-20" key="generalEdit"></svg-icon>
+  generalFolterAdd <svg-icon class="d-flex icon-size-20" key="generalFolterAdd"></svg-icon>
 
-        <div class="example-list"
-          cdkDropList
-          cdkDropListSortingDisabled
-          [cdkDropListData]="items"
-          (cdkDropListDropped)="drop($event)">
-          <div class="example-box" *ngFor="let item of items" cdkDrag>
-            {{item}}
-            <svg-icon (click)="onMoveTopClick($event, item)" key="generalPointingUp" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
-            <svg-icon (click)="onMoveUpClick($event, item)" key="generalTriangleUp" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
-            <svg-icon (click)="onMoveDownClick($event, item)" key="generalTriangleDown" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
-            <svg-icon (click)="onMoveBottomClick($event, item)" key="generalPointingDown" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
-            <svg-icon (click)="onDeleteClick(item)" key="generalDeleteForever" fontSize="20px" style="display: flex; cursor: pointer;"></svg-icon>
-          </div>
-        </div>
-      </div>
-
-      <div class="example-container">
-        <h2>Shopping basket</h2>
-
-        <div cdkDropList [cdkDropListData]="basket" class="example-list" (cdkDropListDropped)="drop($event)">
-          <div class="example-box" *ngFor="let item of basket" cdkDrag>{{item}}</div>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-
-  generalDashboardLevel <svg-icon key="generalDashboardLevel" fontSize="40px" style="display: flex"></svg-icon>
-  generalGrid45 <svg-icon key="generalGrid45" fontSize="40px" style="display: flex"></svg-icon>
-  generalLayout11 <svg-icon key="generalLayout11" fontSize="40px" style="display: flex"></svg-icon>
-  generalSpaceShip <svg-icon key="generalSpaceShip" fontSize="40px" style="display: flex"></svg-icon>
-  generalGear <svg-icon key="generalGear" fontSize="40px" style="display: flex"></svg-icon>
-  generalBook39 <svg-icon key="generalBook39" fontSize="40px" style="display: flex"></svg-icon>
-  generalNotes <svg-icon key="generalNotes" fontSize="40px" style="display: flex"></svg-icon>
-  generalGear2 <svg-icon key="generalGear2" fontSize="40px" style="display: flex"></svg-icon>
-  generalCalendarDate <svg-icon key="generalCalendarDate" fontSize="40px" style="display: flex"></svg-icon>
-  generalFileText <svg-icon key="generalFileText" fontSize="40px" style="display: flex"></svg-icon>
-  generalTagsStack <svg-icon key="generalTagsStack" fontSize="40px" style="display: flex"></svg-icon>
-  generalClock <svg-icon key="generalClock" fontSize="40px" style="display: flex"></svg-icon>
-  generalGear3 <svg-icon key="generalGear3" fontSize="40px" style="display: flex"></svg-icon>
-  generalAEdit <svg-icon key="generalAEdit" fontSize="40px" style="display: flex"></svg-icon>
-  generalMenu8 <svg-icon key="generalMenu8" fontSize="40px" style="display: flex"></svg-icon>
-  generalBook39Two <svg-icon key="generalBook39Two" fontSize="40px" style="display: flex"></svg-icon>
-  generalCQuestion <svg-icon key="generalCQuestion" fontSize="40px" style="display: flex"></svg-icon>
-  generalPadlock <svg-icon key="generalPadlock" fontSize="40px" style="display: flex"></svg-icon>
-  generalCalendarDate2 <svg-icon key="generalCalendarDate2" fontSize="40px" style="display: flex"></svg-icon>
-  generalHotel2 <svg-icon key="generalHotel2" fontSize="40px" style="display: flex"></svg-icon>
-  generalLeave <svg-icon key="generalLeave" fontSize="40px" style="display: flex"></svg-icon>
-  generalBusinessMan04 <svg-icon key="generalBusinessMan04" fontSize="40px" style="display: flex"></svg-icon>
-  generalAppStore <svg-icon key="generalAppStore" fontSize="40px" style="display: flex"></svg-icon>
-  generalAppStore2 <svg-icon key="generalAppStore2" fontSize="40px" style="display: flex"></svg-icon>
-  generalContrast <svg-icon key="generalContrast" fontSize="40px" style="display: flex"></svg-icon>
-  generalSmallDown <svg-icon key="generalSmallDown" fontSize="40px" style="display: flex"></svg-icon>
-  generalCompare <svg-icon key="generalCompare" fontSize="40px" style="display: flex"></svg-icon>
-  generalText2Two <svg-icon key="generalText2Two" fontSize="40px" style="display: flex"></svg-icon>
-  generalEnlarge <svg-icon key="generalEnlarge" fontSize="40px" style="display: flex"></svg-icon>
-  generalDrag <svg-icon key="generalDrag" fontSize="40px" style="display: flex"></svg-icon>
-  generalSurvey <svg-icon key="generalSurvey" fontSize="40px" style="display: flex"></svg-icon>
-  generalCRemove <svg-icon key="generalCRemove" fontSize="40px" style="display: flex"></svg-icon>
-  generalCCheck <svg-icon key="generalCCheck" fontSize="40px" style="display: flex"></svg-icon>
-  generalTWarning <svg-icon key="generalTWarning" fontSize="40px" style="display: flex"></svg-icon>
-  generalPointingUp <svg-icon key="generalPointingUp" fontSize="40px" style="display: flex"></svg-icon>
-  generalTriangleUp <svg-icon key="generalTriangleUp" fontSize="40px" style="display: flex"></svg-icon>
-  generalPointingDown <svg-icon key="generalPointingDown" fontSize="40px" style="display: flex"></svg-icon>
-  generalTriangleDown <svg-icon key="generalTriangleDown" fontSize="40px" style="display: flex"></svg-icon>
-  generalDeleteForever <svg-icon key="generalDeleteForever" fontSize="40px" style="display: flex"></svg-icon>
-  generalSettings <svg-icon key="generalSettings" fontSize="40px" style="display: flex"></svg-icon>
-  generalIDelete <svg-icon key="generalIDelete" fontSize="40px" style="display: flex"></svg-icon>
-  generalIAdd <svg-icon key="generalIAdd" fontSize="40px" style="display: flex"></svg-icon>
-  generalPreview <svg-icon key="generalPreview" fontSize="40px" style="display: flex"></svg-icon>
-  generalEngineStart <svg-icon key="generalEngineStart" fontSize="40px" style="display: flex"></svg-icon>
-  generalBulletList70 <svg-icon key="generalBulletList70" fontSize="40px" style="display: flex"></svg-icon>
-  generalEdit <svg-icon key="generalEdit" fontSize="40px" style="display: flex"></svg-icon>
-  generalFolterAdd <svg-icon key="generalFolterAdd" fontSize="40px" style="display: flex"></svg-icon>
 </div>
