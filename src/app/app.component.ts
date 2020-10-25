@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, copyArrayItem, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-root',
@@ -23,13 +23,21 @@ export class AppComponent {
     'Cucumbers'
   ];
 
-  onMoveClick(e, item, direction: string): void {
+  onMoveTopClick(e, item: string): void {
     const itemPosition = this.items.findIndex(i => i === item);
-    if (direction === 'up' && itemPosition !== 0) {
-      this.items.splice(itemPosition - 1, 0, this.items.splice(itemPosition, 1)[0]);
-    } else if (direction === 'down') {
-      this.items.splice(itemPosition + 1, 0, this.items.splice(itemPosition, 1)[0]);
-    }
+    this.items.splice(0, 0, this.items.splice(itemPosition, 1)[0]);
+  }
+  onMoveUpClick(e, item: string): void {
+    const itemPosition = this.items.findIndex(i => i === item);
+    this.items.splice(itemPosition - 1, 0, this.items.splice(itemPosition, 1)[0]);
+  }
+  onMoveDownClick(e, item: string): void {
+    const itemPosition = this.items.findIndex(i => i === item);
+    this.items.splice(itemPosition + 1, 0, this.items.splice(itemPosition, 1)[0]);
+  }
+  onMoveBottomClick(e, item: string): void {
+    const itemPosition = this.items.findIndex(i => i === item);
+    this.items.splice(this.items.length - 1, 0, this.items.splice(itemPosition, 1)[0]);
   }
 
   onDeleteClick(deletedItem): void {
@@ -39,19 +47,16 @@ export class AppComponent {
 
 
   drop(event: CdkDragDrop<string[]>): void {
-    console.log('drop', event.container.id);
-    // TODO not possible to drag from left to right list
-    // TODO right list stays the same / https://stackoverflow.com/questions/62249991/angular-duplicate-item-via-drag-drop
-    // if (event.container.id !== event.previousContainer.id) {
-
-    // }
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex);
+    const dragOnlyFromRightToLeft = (event.container.id === 'cdk-drop-list-0' && event.previousContainer.id === 'cdk-drop-list-1');
+    if (dragOnlyFromRightToLeft) {
+      if (event.previousContainer === event.container) {
+        moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+      } else {
+        copyArrayItem(event.previousContainer.data,
+          event.container.data,
+          event.previousIndex,
+          event.currentIndex);
+      }
     }
   }
 }
